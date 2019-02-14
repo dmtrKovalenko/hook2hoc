@@ -8,7 +8,6 @@
     "jsx": "react",
     "sourceMap": true,
     "esModuleInterop": true,
-    "emitDeclarationOnly": true,
     "declaration": true
   },
   "include": [

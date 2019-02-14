@@ -1,18 +1,30 @@
 {
   "name": "hook2hoc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Typesafe converter of React hooks to React hocs 🤓",
   "main": "build/index.js",
   "module": "build/index.esm.js",
+  "typings": "build/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "test": "jest --env jsdom",
-    "build": "rollup -c && tsc",
-    "typescript": "tsc"
+    "build": "rollup -c && yarn typescript",
+    "typescript": "tsc --emitDeclarationOnly"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "react-dom",
+    "hooks",
+    "hook",
+    "hoc",
+    "converter",
+    "hook2hoc"
+  ],
+  "author": {
+    "name": "Dmitriy Kovalenko",
+    "email": "dmtr.kovalenko@outlook.com"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.3",
     "jest": "^24.1.0",
@@ -22,17 +34,17 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-typescript": "^1.0.0",
     "ts-jest": "^23.10.5",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "@types/enzyme": "^3.1.17",
+    "@types/jest-diff": "^20.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1"
   },
   "peerDependencies": {
     "react": "^16.8.1"
   },
   "dependencies": {
-    "@types/enzyme": "^3.1.17",
-    "@types/jest-diff": "^20.0.1",
-    "@types/react": "^16.8.2",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.1",
-    "tslib": "^1.9.3"
+    "tslib": "^1.9.3",
+    "@types/react": "^16.8.2"
   }
 }
