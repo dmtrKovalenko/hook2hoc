@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "noUnusedLocals": false,
+    "outDir": "../build",
+    "jsx": "react",
+    "sourceMap": true,
+    "esModuleInterop": true
+  }
+}
