@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { mount } from "enzyme";
-import hook2hoc, { tuple } from "../src";
+import { hook2hoc, tuple } from "../src";
 
 type Props = {
   someAnotherProp: string;
