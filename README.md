@@ -2,8 +2,8 @@
 > Typesafe converter of React hooks to React hocs 🤓
 
 ## What and why
-This project allows to have one source of trust for the code using both React hooks and React HOCs features. 
-It allowes easily and type-safely covert the hooks to hocs.
+Main purpose of this project is making integration of hooks to existing project much easier. 
+This is an automate and type-safe converter of **React hooks** to ~~React HOCs~~. Just move your logic to hook, create a HOC for compatability and go. 
 
 ## Installation
 
