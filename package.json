@@ -2,9 +2,12 @@
   "name": "hook2hoc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "sideEffects": false,
   "scripts": {
-    "test": "jest --env jsdom"
+    "test": "jest --env jsdom",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,9 @@
     "jest": "^24.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.3.3"
   },
@@ -24,6 +30,7 @@
     "@types/enzyme": "^3.1.17",
     "@types/react": "^16.8.2",
     "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.1"
+    "enzyme-adapter-react-16": "^1.9.1",
+    "tslib": "^1.9.3"
   }
 }

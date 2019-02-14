@@ -12,7 +12,7 @@ export function tuple(data: Array<any>) {
   return data;
 }
 
-const hook2hoc = <
+export const hook2hoc = <
   TResult,
   TArgs extends any[],
   TProp extends string,
@@ -37,10 +37,7 @@ const hook2hoc = <
     return <Component {...props as any} {...innerProps} />;
   };
 
-  withHook.displayName = `${propName}Hook(${Component.displayName ||
-    Component.name})`;
+  withHook.displayName = `${propName}Hook(${Component.displayName || Component.name})`;
 
   return withHook;
 };
-
-export default hook2hoc;
