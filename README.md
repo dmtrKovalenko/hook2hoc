@@ -1,6 +1,11 @@
 # hook2hoc
 > Typesafe converter of React hooks to React hocs 🤓
 
+[![npm version](https://img.shields.io/npm/v/hook2hoc.svg)](https://www.npmjs.com/package/hook2hoc)
+[![bundlesize](https://badgen.net/bundlephobia/minzip/hook2hoc)](https://bundlephobia.com/result?p=hook2hoc@1.0.0)
+[![codecov](https://codecov.io/gh/dmtrKovalenko/hook2hoc/branch/master/graph/badge.svg)](https://codecov.io/gh/dmtrKovalenko/hook2hoc)
+[![travis](https://travis-ci.com/dmtrKovalenko/hook2hoc.svg?branch=master)](https://travis-ci.com/dmtrKovalenko/hook2hoc)
+
 ## What and why
 Main purpose of this project is making integration of hooks to existing project much easier. 
 This is an automate and type-safe converter of **React hooks** to ~~React HOCs~~. Just move your logic to hook, create a HOC for compatability and go. 
