@@ -62,7 +62,7 @@ import { hook2hoc, tuple } from "hook2hoc"
 
 type Props = {
   someAnotherProp: string;
-  input: {
+  formInput: {
     value: string | undefined;
     onChange: (value: React.ChangeEvent<HTMLInputElement>) => void;
   };
