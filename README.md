@@ -16,6 +16,8 @@ npm install hook2hoc
 The main purpose of this project is to easily reuse your custom hooks logic in class components.
 
 ```jsx
+import { hook2hoc } from "hook2hoc"
+
 function useFormInput(defaultValue) {
   const [value, setValue] = React.useState(defaultValue);
   return {
