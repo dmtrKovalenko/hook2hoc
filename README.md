@@ -50,7 +50,7 @@ export default hook2hoc("formInput", useFormInput, ["initalValue"])(ClassCompone
 
 It is also possible to pass arguments to your hooks directly from the props. Just use function instead of array in last argument.
 ```jsx
-hook2hoc("formInput", useFormInput, (props) => props.someValueFromOutside)(ClassComponent)
+hook2hoc("formInput", useFormInput, (props) => [props.someValueFromOutside])(ClassComponent)
 ```
 
 ### Type safety
