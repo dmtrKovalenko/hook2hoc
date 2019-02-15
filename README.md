@@ -7,7 +7,8 @@
 [![travis](https://travis-ci.com/dmtrKovalenko/hook2hoc.svg?branch=master)](https://travis-ci.com/dmtrKovalenko/hook2hoc)
 
 ## What and why
-Main purpose of this project is making integration of hooks to existing project much easier. 
+Main purpose of this project is making integration of hooks much easier. It allowes primarily use hooks, and generate HOCs from on the flight.
+
 This is an automate and type-safe converter of **React hooks** to ~~React HOCs~~. Just move your logic to hook, create a HOC for compatability and go. 
 
 ## Installation
