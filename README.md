@@ -69,13 +69,6 @@ type Props = {
   };
 };
 
-class ClassComponent extends React.Component<Props> {
-  render() {
-    const { value, onChange } = this.props.input;
-    return <input value={value} onChange={onChange} />;
-  }
-}
-
 function useFormInput(defaultValue: string, foo?: number) {
   const [value, setValue] = React.useState(defaultValue);
   return {
@@ -84,8 +77,17 @@ function useFormInput(defaultValue: string, foo?: number) {
   };
 }
 
+class ClassComponent extends React.Component<Props> {
+  render() {
+    const { value, onChange } = this.props.input;
+    return <input value={value} onChange={onChange} />;
+  }
+}
+
 // tuple required for strict parameters type casting
-const WithHook = hook2hoc("formInput", useFormInput, props => tuple(["initialValue"]))
+const WithHook = hook2hoc(
+  "formInput", useFormInput, props => tuple(["initialValue"])
+)(ClassComponent)
 
 <WithHook someAnotherProp="required as well" />
 ```
