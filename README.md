@@ -49,8 +49,10 @@ export default hook2hoc("formInput", useFormInput, ["initalValue"])(ClassCompone
 ### Dynamic props
 
 It is also possible to pass arguments to your hooks directly from the props. Just use function instead of array in last argument.
+
+**!! If you need dynamyc props as arguments place it after component **
 ```jsx
-hook2hoc("formInput", useFormInput, (props) => [props.someValueFromOutside])(ClassComponent)
+hook2hoc("formInput", useFormInput)(ClassComponent, (props) => [props.someValueFromOutside])
 ```
 
 ### Type safety
@@ -86,8 +88,8 @@ class ClassComponent extends React.Component<Props> {
 
 // tuple required for strict parameters type casting
 const WithHook = hook2hoc(
-  "formInput", useFormInput, props => tuple(["initialValue"])
-)(ClassComponent)
+  "formInput", useFormInput
+)(ClassComponent, props => tuple(["initialValue"]))
 
 <WithHook someAnotherProp="required as well" />
 ```
