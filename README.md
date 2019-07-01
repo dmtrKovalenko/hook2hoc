@@ -87,9 +87,10 @@ class ClassComponent extends React.Component<Props> {
 }
 
 // tuple required for strict parameters type casting
-const WithHook = hook2hoc(
-  "formInput", useFormInput
-)(ClassComponent, props => tuple(["initialValue"]))
+const WithHook = hook2hoc("formInput", useFormInput)(
+  ClassComponent, 
+  props => tuple(["initialValue"])
+)
 
 <WithHook someAnotherProp="required as well" />
 ```
