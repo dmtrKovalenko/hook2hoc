@@ -63,14 +63,6 @@ One thing is required for dynamic props
 ```typescript
 import { hook2hoc, tuple } from "hook2hoc"
 
-type Props = {
-  someAnotherProp: string;
-  formInput: {
-    value: string | undefined;
-    onChange: (value: React.ChangeEvent<HTMLInputElement>) => void;
-  };
-};
-
 function useFormInput(defaultValue: string, foo?: number) {
   const [value, setValue] = React.useState(defaultValue);
   return {
@@ -78,6 +70,11 @@ function useFormInput(defaultValue: string, foo?: number) {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)
   };
 }
+
+type Props = {
+  someAnotherProp: string;
+  formInput: ReturnType<typeof useFormInput>;
+};
 
 class ClassComponent extends React.Component<Props> {
   render() {
